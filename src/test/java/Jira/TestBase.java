@@ -2,6 +2,7 @@ package Jira;
 
 import TestRail.APIClient;
 import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -40,7 +41,7 @@ public class TestBase {
 
     }
 
-    @BeforeGroups(groups = { "Attachments" })
+    @BeforeGroups(groups = {"Attachments"})
     public static void prepareAttachment() throws IOException {
         new File(TestData.attachmentFileName).createNewFile();
     }
@@ -65,17 +66,23 @@ public class TestBase {
         client.setUser("rvalek@intersog.com");
         client.setPassword("hillel");
 
+
+
         Map data = new HashMap();
-        data.put("name", "QQQQQQQQ");
+        data.put("name", "QQQQQQQQ " + Helper.timeStamp());
         data.put("include_all", false);
 
-        JSONObject c = (JSONObject) client.sendPost("add_run/1", data) ;
         ArrayList<Integer> caseIds = new ArrayList<>();
 
         caseIds.add(1);
         caseIds.add(2);
-        c.put("case_ids", caseIds);
 
+        data.put("case_ids", caseIds);
+
+        System.out.println("json" + JSONValue.toJSONString(data));
+
+        JSONObject c = (JSONObject) client.sendPost("add_run/1", data) ;
+        
         System.out.println(c.get("title"));
 
 
