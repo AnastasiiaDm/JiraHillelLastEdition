@@ -1,5 +1,5 @@
 /**
- * TestRail API binding for Java (API v2, available since TestRail 3.0)
+ * JiraAuto.Jira.reporting API binding for Java (API v2, available since JiraAuto.Jira.reporting 3.0)
  *
  * Learn more:
  *
@@ -9,7 +9,7 @@
  * Copyright Gurock Software GmbH. See license.md for details.
  */
  
-package TestRail;
+package JiraAuto.reporting;
 
 import java.net.URL;
 import java.net.HttpURLConnection;
@@ -157,7 +157,7 @@ public class APIClient
 			if (istream == null)
 			{
 				throw new APIException(
-					"TestRail API return HTTP " + status + 
+					"JiraAuto.Jira.reporting API return HTTP " + status +
 					" (No additional error message received)"
 				);
 			}
@@ -200,7 +200,7 @@ public class APIClient
 		
 		// Check for any occurred errors and add additional details to
 		// the exception message, if any (e.g. the error message returned
-		// by TestRail).
+		// by JiraAuto.Jira.reporting).
 		if (status != 200)
 		{
 			String error = "No additional error message received";
@@ -214,7 +214,7 @@ public class APIClient
 			}
 			
 			throw new APIException(
-				"TestRail API returned HTTP " + status +
+				"JiraAuto.Jira.reporting API returned HTTP " + status +
 				"(" + error + ")"
 			);
 		}

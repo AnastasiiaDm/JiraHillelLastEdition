@@ -3,7 +3,7 @@
     <test name="Sanity" verbose="1" group-by-instances="true">
         <parameter name="browserType" value="chrome"/>
         <classes>
-            <class name="Jira.JiraTests"/>
+            <class name="JiraAuto.Jira.JiraTests"/>
         </classes>
     </test>
 </suite>

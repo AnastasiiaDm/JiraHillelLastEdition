@@ -1,28 +1,33 @@
-package Jira;
+package JiraAuto.Jira;
 
+import JiraAuto.WebDriverTestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class JiraTests extends TestBase {
-    static JiraActions steps;
+import JiraAuto.WebDriverTestBase;
 
-    @BeforeTest
-    public static void init() {
-        steps = PageFactory.initElements(browser, JiraActions.class);
+public class JiraTests extends WebDriverTestBase {
+    private LoginPage loginPage;
+    private IssuePage issuePage;
+
+    @BeforeClass(alwaysRun = true)
+    public void initPages() {
+        loginPage = PageFactory.initElements(browser, LoginPage.class);
+        issuePage = PageFactory.initElements(browser, IssuePage.class);
+        System.out.println("Jira Pages Initialized");
     }
 
-    @Test(priority = -1)
-    public static void loginFail() {
-
-        steps.loginFailCheck();
+    @Test(description = "1. Invalid Login", priority = -1)
+    public void loginFail() {
+        loginPage.failureLogin();
     }
 
-    @Test(priority = 1)
-    public static void loginSuccess() {
-
-        steps.loginSuccessCheck();
+    @Test(description = "2. Valid Login", groups = { "Sanity" })
+    public  void loginSuccess() {
+        loginPage.successfulLogin();
     }
 
     @Test(dependsOnMethods = {"loginSuccess"})
@@ -54,7 +59,7 @@ public class JiraTests extends TestBase {
 
 //        downloadedFileName =
 //
-//        Assert.assertEquals(TestData.downloadedFileLocation, );
+//        Assert.assertEquals(JiraVars.downloadedFileLocation, );
     }
 
 

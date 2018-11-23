@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Sanity Suite" verbose="0" group-by-instances="true">
+    <listeners>
+        <listener class-name="JiraAuto.listeners.RetryListener"/>
+        <listener class-name="JiraAuto.listeners.TestListener"/>
+    </listeners>
+    <test name="Sanity" verbose="1" group-by-instances="true">
+        <!-- <parameter name="testRailProjectId" value="1"/>
+        <parameter name="testRailRunPrefix" value="JiraAuto.Jira"/> -->
+        <groups>
+            <run>
+                <exclude name="disabled"/>
+                <include name="Sanity"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="JiraAuto.Jira"/>
+        </packages>
+    </test>
+</suite>
+        <!-- mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/sanityRun.xml -->

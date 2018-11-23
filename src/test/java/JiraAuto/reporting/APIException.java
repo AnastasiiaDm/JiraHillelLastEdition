@@ -1,5 +1,5 @@
 /**
- * TestRail API binding for Java (API v2, available since TestRail 3.0)
+ * JiraAuto.Jira.reporting API binding for Java (API v2, available since JiraAuto.Jira.reporting 3.0)
  *
  * Learn more:
  *
@@ -9,7 +9,7 @@
  * Copyright Gurock Software GmbH. See license.md for details.
  */
 
-package TestRail;
+package JiraAuto.reporting;
  
 public class APIException extends Exception
 {

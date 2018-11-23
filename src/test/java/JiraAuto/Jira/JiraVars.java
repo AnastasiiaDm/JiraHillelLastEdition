@@ -1,6 +1,8 @@
-package Jira;
+package JiraAuto.Jira;
 
-public interface TestData {
+import JiraAuto.Helper;
+
+public interface JiraVars {
     String baseURL = "http://jira.hillel.it:8080/";
 
     String username = "autorob";

@@ -1,5 +1,7 @@
-package Jira;
+package JiraAuto.Jira;
 
+import JiraAuto.Helper;
+import JiraAuto.WebDriverTestBase;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -9,27 +11,15 @@ import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public class JiraActions {
+public class IssuePage {
     private String attachmentLink;
     private String newIssuePath;
     private String newIssueSummary = "AutoTest " + Helper.timeStamp();
-    private WebDriver browser;
-    private Helper h;
-
-    @FindBy(css = "input#login-form-username")
-    WebElement usernameInput;
-
-    @FindBy(css = "input#login-form-password")
-    WebElement passwordInput;
+    private final WebDriver browser;
+    private final Helper h;
 
     @FindBy(css = "a#create_link")
     WebElement createIssueButton;
-
-    @FindBy(css = "div#usernameerror")
-    List<WebElement> errorMessages;
-
-    @FindBy(css = "a#header-details-user-fullname")
-    List<WebElement> buttonProfile;
 
     @FindBy(css = "input#project-field")
     WebElement projectInput;
@@ -49,40 +39,9 @@ public class JiraActions {
     @FindBy(css = "input.selectionCheckbox[name='selected-1']")
     WebElement checkBox1;
 
-
-
-    public JiraActions(WebDriver browser) {
+    public IssuePage(WebDriver browser) {
         this.browser = browser;
         this.h = new Helper(browser);
-    }
-
-    private void login(boolean correctPass) {
-
-        String pass = (correctPass ? TestData.pass : TestData.badPass) + "\n";
-        TestBase.browser.get(TestData.baseURL);
-
-        h.fill(usernameInput, TestData.username);
-        h.fill(passwordInput, pass);
-    }
-
-    public void loginFailCheck() {
-        login(false);
-
-        // Some error message is presentErrorMessages
-        Assert.assertTrue(errorMessages.size() > 0);
-        System.out.println("Login failed, error message present");
-
-        // Logged-in UI is not present
-        Assert.assertFalse(
-                buttonProfile.size() > 0 && buttonProfile.get(0).getAttribute(TestData.userNameCSS).equals(TestData.userName));
-        System.out.println("Login failed, username not present");
-    }
-
-    public void loginSuccessCheck() {
-        login(true);
-        Assert.assertTrue(
-                buttonProfile.size() > 0 && buttonProfile.get(0).getAttribute(TestData.userNameCSS).equals(TestData.username));
-        System.out.println("Profile.size: " + buttonProfile.size() + " Login Success");
     }
 
     public void projectSelect() {
@@ -90,7 +49,7 @@ public class JiraActions {
         createIssueButton.click();
         System.out.println("createButton size: " + createIssueButton.getText());
 
-        h.fill(projectInput, TestData.projectName);
+        h.fill(projectInput, JiraVars.projectName);
     }
 
     public void createIssueCheck() {
@@ -110,7 +69,7 @@ public class JiraActions {
     }
 
     public void uploadFileCheck() {
-        dropInput.sendKeys(TestData.attachmentFileLocation + TestData.attachmentFileName);
+        dropInput.sendKeys(JiraVars.attachmentFileLocation + JiraVars.attachmentFileName);
     }
 
 
@@ -119,7 +78,7 @@ public class JiraActions {
                 .withTimeout(Duration.ofSeconds(7))
                 .pollingEvery(Duration.ofMillis(500))
                 .ignoring(InvalidElementStateException.class)
-                .until(browser -> h.fill(summaryInput, TestData.newIssueSummary))
+                .until(browser -> h.fill(summaryInput, JiraVars.newIssueSummary))
                 .submit();
     }
 
@@ -130,7 +89,7 @@ public class JiraActions {
                 .ignoring(NoSuchElementException.class)
                 .until(browser -> linkAttachment);
 
-        Assert.assertEquals(TestData.attachmentFileName, linkAttachment.getText());
+        Assert.assertEquals(JiraVars.attachmentFileName, linkAttachment.getText());
 
         attachmentLink = linkAttachment.getAttribute("href");
     }
