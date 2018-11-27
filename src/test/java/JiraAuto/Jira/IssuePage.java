@@ -44,15 +44,18 @@ public class IssuePage {
         this.h = new Helper(browser);
     }
 
-    public void projectSelect() {
+    public void createIssue() {
         System.out.println("projectSelect start");
         createIssueButton.click();
         System.out.println("createButton size: " + createIssueButton.getText());
 
         h.fill(projectInput, JiraVars.projectName);
-    }
 
-    public void createIssueCheck() {
+        new FluentWait<>(browser).withTimeout(Duration.ofSeconds(5)).pollingEvery(Duration.ofMillis(500))
+                .ignoring(InvalidElementStateException.class)
+                .until(browser -> h.fill(summaryInput, JiraVars.newIssueSummary)).submit();
+
+        // ((JavascriptExecutor) browser).executeScript("window.scrollBy(0,250)");
 
         Assert.assertTrue(linkNewIssues.size() != 0);
 
@@ -61,28 +64,16 @@ public class IssuePage {
         System.out.println("New issue Summary: " + newIssueSummary + "\n" + "createIssue success");
     }
 
-    public void openIssueCheck() {
+    public void openIssue() {
         browser.get(newIssuePath);
         Assert.assertTrue(browser.getTitle().contains(newIssueSummary));
 
         System.out.println("openIssue success");
     }
 
-    public void uploadFileCheck() {
+    public void uploadFile() {
         dropInput.sendKeys(JiraVars.attachmentFileLocation + JiraVars.attachmentFileName);
-    }
 
-
-    public void waitSummarySubmit() {
-        new FluentWait<>(browser)
-                .withTimeout(Duration.ofSeconds(7))
-                .pollingEvery(Duration.ofMillis(500))
-                .ignoring(InvalidElementStateException.class)
-                .until(browser -> h.fill(summaryInput, JiraVars.newIssueSummary))
-                .submit();
-    }
-
-    public void waitLinkAttachment() {
         new FluentWait<>(browser)
                 .withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofSeconds(2))
@@ -91,11 +82,10 @@ public class IssuePage {
 
         Assert.assertEquals(JiraVars.attachmentFileName, linkAttachment.getText());
 
-        attachmentLink = linkAttachment.getAttribute("href");
+        attachmentLink = linkAttachment.getText();
     }
 
-    public  void selectCheckBox(){
-        checkBox1.click();
-
+    public  void downloadFile(){
+        browser.get(attachmentLink);
     }
 }

@@ -30,36 +30,25 @@ public class JiraTests extends WebDriverTestBase {
         loginPage.successfulLogin();
     }
 
-    @Test(dependsOnMethods = {"loginSuccess"})
-    public static void createIssue() {
-
-        steps.projectSelect();
-
-        steps.waitSummarySubmit();
-
-        steps.createIssueCheck();
+    @Test(description = "3. Create issue", dependsOnMethods = { "successfulLogin" }, groups = { "Sanity", "Issues" })
+    public void createIssue() {
+        issuePage.createIssue();
     }
 
-    @Test(dependsOnMethods = {"createIssue"})
-    public static void openIssue() {
-        steps.openIssueCheck();
+    @Test(description = "4. Open issue", dependsOnMethods = { "createIssue" }, groups = { "Sanity", "Issues" })
+    public void openIssue() {
+        issuePage.openIssue();
     }
 
-    @Test(dependsOnMethods = {"openIssue"})
-    public void uploadFile() {
-        steps.uploadFileCheck();
-        steps.waitLinkAttachment();
+    @Test(description = "5. Uplaod Attachment", dependsOnMethods = { "openIssue" }, groups = { "Issues.Attachments" })
+    public void uploadAttachment() {
+        issuePage.uploadFile();
     }
 
-    @Test(dependsOnMethods = {"uploadFile"})
-    static void downloadFile() {
-
-        browser.findElement(By.cssSelector("a.attachment-title")).submit();
-//        browser.findElement(By.cssSelector("a#cp-control-panel-download")).click();
-
-//        downloadedFileName =
-//
-//        Assert.assertEquals(JiraVars.downloadedFileLocation, );
+    @Test(description = "Download Attachment", dependsOnMethods = { "uploadAttachment" }, groups = {
+            "Issues.Attachments", "disabled" })
+    public void downloadAttachment() {
+        // issuePage.downloadFile();
     }
 
 
