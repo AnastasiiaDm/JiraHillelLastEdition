@@ -44,6 +44,10 @@ public class IssuePage {
         this.h = new Helper(browser);
     }
 
+    public boolean errorMessageIsShown(){
+        return this.linkNewIssues.size() != 0;
+    }
+
     public void createIssue() {
         System.out.println("projectSelect start");
         createIssueButton.click();

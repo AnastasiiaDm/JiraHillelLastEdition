@@ -3,6 +3,7 @@ package JiraAuto.Jira;
 import JiraAuto.WebDriverTestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -23,6 +24,7 @@ public class JiraTests extends WebDriverTestBase {
     @Test(description = "1. Invalid Login", priority = -1)
     public void loginFail() {
         loginPage.failureLogin();
+        Assert.assertTrue(issuePage.errorMessageIsShown());
     }
 
     @Test(description = "2. Valid Login", groups = { "Sanity" })
@@ -30,7 +32,7 @@ public class JiraTests extends WebDriverTestBase {
         loginPage.successfulLogin();
     }
 
-    @Test(description = "3. Create issue", dependsOnMethods = { "successfulLogin" }, groups = { "Sanity", "Issues" })
+    @Test(description = "3. Create issue", dependsOnMethods = { "loginSuccess" }, groups = { "Sanity", "Issues" })
     public void createIssue() {
         issuePage.createIssue();
     }
