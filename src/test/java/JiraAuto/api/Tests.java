@@ -13,7 +13,7 @@ import JiraAuto.api.requests.Requests;
 
 public class Tests {
     String baseURL = "http://37.59.228.229:3000/API/users/";
-    String userId = "1";
+    String userId = "";
 
     private void findUserID(String data) {
         Matcher m = Pattern.compile("\"id\":\"(\\d+)").matcher(data);
@@ -40,13 +40,25 @@ public class Tests {
         return new Object[][]{{"\"role\": \"Administrator\"", true}, {"sadadd", false}};
     }
 
-    @Test(description = "Third requirement - saving users", dataProvider = "saveUserData")
-    void saveUser(String data, Boolean expectedResult) throws IOException {
+    @Test(description = "Third requirement - edit and save users data")
+    void saveUser() throws IOException {
+        String data = "{\"id\":10,\"name\":\"TEST_ROBERT\",\"phone\":\"PHONEEE!!!!\",\"role\":\"Student\",\"strikes\":\"2\",\"location\":\"\"}";
+        String userId = "10";
+
         System.out.println("saveUser:data " + data);
         System.out.println("saveUser:url " + baseURL + userId);
-        String[] responseData = Requests.sendPut(baseURL + userId, '{' + data + '}');
-        Assert.assertEquals((Boolean) Requests.getUserInfo(baseURL, userId).contains(data), expectedResult);
-        checkContentType(responseData[0]);
+        String[] responseData = Requests.sendPut(baseURL + userId, data);
+
+        String updatedInfo = Requests.sendGet(baseURL)[1];
+        System.out.println(updatedInfo);
+
+        Assert.assertTrue(updatedInfo.contains(data));
+    }
+    @Test(description = "Fourth requirement - creating users")
+    void createUser() throws IOException {
+
+
+        Assert.assertTrue();
     }
 
 }
