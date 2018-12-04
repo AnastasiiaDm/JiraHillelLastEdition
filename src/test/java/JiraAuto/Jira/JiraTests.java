@@ -30,6 +30,7 @@ public class JiraTests extends WebDriverTestBase {
     @Test(description = "2. Valid Login", groups = { "Sanity" })
     public  void loginSuccess() {
         loginPage.successfulLogin();
+
     }
 
     @Test(description = "3. Create issue", dependsOnMethods = { "loginSuccess" }, groups = { "Sanity", "Issues" })

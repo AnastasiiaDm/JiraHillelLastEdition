@@ -9,8 +9,8 @@ import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
 public class WebDriverTestBase {
-    protected WebDriver browser1;
-    protected WebDriver browser2;
+    protected WebDriver browser;
+//    protected WebDriver browser2;
 
     private HashMap<Integer, Integer> testResults = new HashMap<>();
 
@@ -19,17 +19,17 @@ public class WebDriverTestBase {
     }
     @BeforeTest(alwaysRun = true)
     public void setUp() {
-        browser1 = new ChromeDriver(new ChromeOptions().addArguments("--start-maximized", "--incognito"));
-        browser2 = new ChromeDriver(new ChromeOptions().addArguments("--start-maximized", "--incognito"));
+        browser = new ChromeDriver(new ChromeOptions().addArguments("--start-maximized", "--incognito"));
+//        browser2 = new ChromeDriver(new ChromeOptions().addArguments("--start-maximized", "--incognito"));
 
-        browser1.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        browser2.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        browser.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+//        browser2.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     @AfterTest(alwaysRun = true)
     public void finish() {
-        browser1.close();
-        browser2.close();
+        browser.close();
+//        browser2.close();
     }
 
 //    @BeforeClass

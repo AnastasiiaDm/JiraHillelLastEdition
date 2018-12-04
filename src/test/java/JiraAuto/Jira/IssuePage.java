@@ -48,10 +48,13 @@ public class IssuePage {
         return this.linkNewIssues.size() != 0;
     }
 
+//    public boolean userNameEqualsUserAttribute(){
+//        return this.JiraVars.username, buttonProfile.get(0).getAttribute(JiraVars.userNameCSS);
+//    }
+
+
     public void createIssue() {
-        System.out.println("projectSelect start");
         createIssueButton.click();
-        System.out.println("createButton size: " + createIssueButton.getText());
 
         h.fill(projectInput, JiraVars.projectName);
 
@@ -71,8 +74,6 @@ public class IssuePage {
     public void openIssue() {
         browser.get(newIssuePath);
         Assert.assertTrue(browser.getTitle().contains(newIssueSummary));
-
-        System.out.println("openIssue success");
     }
 
     public void uploadFile() {
