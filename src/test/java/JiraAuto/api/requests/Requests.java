@@ -28,6 +28,7 @@ public class Requests {
 
     public static String[] sendPost(String URL, String data) throws IOException {
         HttpPost request = new HttpPost(URL);
+        request.setHeader("Content-Type", "application/json");
         request.setEntity(new StringEntity(data, "UTF-8"));
         return getData(httpclient.execute(request));
     }
@@ -39,9 +40,11 @@ public class Requests {
         return getData(httpclient.execute(request));
     }
 
-    public static String[] sendDelete(String URL, String data) throws IOException {
+    public static String[] sendDelete(String URL) throws IOException {
         HttpDelete request = new HttpDelete(URL);
-        ((HttpResponse) request).setEntity(new StringEntity(data, "UTF-8"));
+        request.setHeader("Content-Type", "application/json");
+//        ((HttpResponse) request).setEntity(new StringEntity(data, "UTF-8"));/
+//         request.setEntity(new StringEntity(data, "UTF-8"));
         return getData(httpclient.execute(request));
     }
 
