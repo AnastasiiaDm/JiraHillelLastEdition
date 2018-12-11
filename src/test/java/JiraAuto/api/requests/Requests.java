@@ -11,6 +11,7 @@ import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
+import org.apache.http.conn.HttpHostConnectException;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
@@ -23,7 +24,15 @@ public class Requests {
     public static String[] sendGet(String URL) throws IOException {
         HttpGet request = new HttpGet(URL);
         request.setHeader("Content-Type", "application/json");
-        return getData(httpclient.execute(request));
+        HttpResponse response;
+        try {
+            response = httpclient.execute(request);
+        } catch (HttpHostConnectException error) {
+            System.out.println("HttpHostConnectException: " + error.getMessage());
+            return null;
+        }
+
+        return getData(response);
     }
 
     public static String[] sendPost(String URL, String data) throws IOException {
@@ -51,13 +60,15 @@ public class Requests {
     private static String[] getData(HttpResponse response) throws IOException {
         HttpEntity entity = response.getEntity();
 
-        if(entity == null)
+        if (entity == null)
             return null;
 
 
-        String[] responseData = new String[2];
+        String[] responseData = new String[3];
         responseData[0] = response.getEntity().toString();
         responseData[1] = entity != null ? EntityUtils.toString(entity) : "No response data.";
+        responseData[2] = String.valueOf(response.getStatusLine().getStatusCode());
+
         return responseData;
     }
 

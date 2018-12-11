@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/JiraAuto/api/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JiraAuto/api/Tests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/JiraAuto/api/requests/Requests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JiraAuto/api/requests/Requests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/JiraAuto/api/Tests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/JiraAuto/api/Tests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/JiraAuto/api/requests/Requests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/JiraAuto/api/requests/Requests.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,7 +23,7 @@
     <session id="261634273">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.105" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.114" value="1" />
@@ -31,35 +33,38 @@
           <entry key="project.open.time.73" value="1" />
           <entry key="project.open.time.75" value="1" />
           <entry key="project.open.time.76" value="1" />
-          <entry key="project.open.time.81" value="1" />
+          <entry key="project.open.time.81" value="2" />
+          <entry key="project.open.time.83" value="1" />
           <entry key="project.open.time.90" value="1" />
           <entry key="project.open.time.96" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1876" />
+          <entry key="java" value="2759" />
           <entry key="xml" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1876" />
+          <entry key="JAVA" value="2759" />
           <entry key="XML" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="6" />
-          <entry key="java" value="32" />
+          <entry key="class" value="8" />
+          <entry key="java" value="33" />
+          <entry key="txt" value="1" />
           <entry key="xml" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="6" />
-          <entry key="JAVA" value="32" />
+          <entry key="CLASS" value="8" />
+          <entry key="JAVA" value="33" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="18" />
         </counts>
       </usages-collector>
@@ -67,28 +72,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/JiraAuto/api/Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="130" column="21" selection-start-line="130" selection-start-column="21" selection-end-line="130" selection-end-column="21" />
+            <state relative-caret-position="-77">
+              <caret line="173" column="23" selection-start-line="173" selection-start-column="23" selection-end-line="173" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#596#597#0" expanded="true" />
-                <element signature="e#674#675#0" expanded="true" />
+                <element signature="e#752#753#0" expanded="true" />
+                <element signature="e#830#831#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/JiraAuto/api/requests/Requests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-70">
-              <caret line="50" column="25" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="25" />
+            <state relative-caret-position="22">
+              <caret line="69" column="82" selection-start-line="69" selection-start-column="82" selection-end-line="69" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.9/httpcore-4.4.9.jar!/org/apache/http/StatusLine.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -130,8 +144,8 @@
         <option value="$PROJECT_DIR$/src/test/java/JiraAuto/Jira/JiraTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/JiraAuto/Jira/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/JiraAuto/Jira/IssuePage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/JiraAuto/api/Tests.java" />
         <option value="$PROJECT_DIR$/src/test/java/JiraAuto/api/requests/Requests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/JiraAuto/api/Tests.java" />
       </list>
     </option>
   </component>
@@ -166,7 +180,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -230,10 +243,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544104681956" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544546670195" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pom.xml" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -247,61 +262,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.Tests.deleteUser">
-    <configuration name="Tests.adminUser" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JiraHillelLastEdition" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="JiraAuto.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="JiraAuto.api" />
-      <option name="MAIN_CLASS_NAME" value="JiraAuto.api.Tests" />
-      <option name="METHOD_NAME" value="adminUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tests.createAdmin" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JiraHillelLastEdition" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="JiraAuto.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="JiraAuto.api" />
-      <option name="MAIN_CLASS_NAME" value="JiraAuto.api.Tests" />
-      <option name="METHOD_NAME" value="createAdmin" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tests.createUser" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JiraHillelLastEdition" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="JiraAuto.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="JiraAuto.api" />
-      <option name="MAIN_CLASS_NAME" value="JiraAuto.api.Tests" />
-      <option name="METHOD_NAME" value="createUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.Tests.j">
     <configuration name="Tests.deleteUser" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="JiraHillelLastEdition" />
       <extension name="coverage">
@@ -320,7 +281,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tests.saveUser" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Tests.j" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="JiraHillelLastEdition" />
       <extension name="coverage">
         <pattern>
@@ -330,7 +291,61 @@
       </extension>
       <option name="PACKAGE_NAME" value="JiraAuto.api" />
       <option name="MAIN_CLASS_NAME" value="JiraAuto.api.Tests" />
-      <option name="METHOD_NAME" value="saveUser" />
+      <option name="METHOD_NAME" value="j" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tests.n" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JiraHillelLastEdition" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="JiraAuto.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="JiraAuto.api" />
+      <option name="MAIN_CLASS_NAME" value="JiraAuto.api.Tests" />
+      <option name="METHOD_NAME" value="n" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tests.openPort20007" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JiraHillelLastEdition" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="JiraAuto.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="JiraAuto.api" />
+      <option name="MAIN_CLASS_NAME" value="JiraAuto.api.Tests" />
+      <option name="METHOD_NAME" value="openPort20007" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tests.responceConteinHeader" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JiraHillelLastEdition" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="JiraAuto.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="JiraAuto.api" />
+      <option name="MAIN_CLASS_NAME" value="JiraAuto.api.Tests" />
+      <option name="METHOD_NAME" value="responceConteinHeader" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -339,19 +354,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.Tests.saveUser" />
-      <item itemvalue="TestNG.Tests.createUser" />
-      <item itemvalue="TestNG.Tests.adminUser" />
-      <item itemvalue="TestNG.Tests.createAdmin" />
       <item itemvalue="TestNG.Tests.deleteUser" />
+      <item itemvalue="TestNG.Tests.openPort20007" />
+      <item itemvalue="TestNG.Tests.n" />
+      <item itemvalue="TestNG.Tests.responceConteinHeader" />
+      <item itemvalue="TestNG.Tests.j" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Tests.j" />
+        <item itemvalue="TestNG.Tests.responceConteinHeader" />
+        <item itemvalue="TestNG.Tests.n" />
+        <item itemvalue="TestNG.Tests.openPort20007" />
         <item itemvalue="TestNG.Tests.deleteUser" />
-        <item itemvalue="TestNG.Tests.createUser" />
-        <item itemvalue="TestNG.Tests.createAdmin" />
-        <item itemvalue="TestNG.Tests.saveUser" />
-        <item itemvalue="TestNG.Tests.adminUser" />
       </list>
     </recent_temporary>
   </component>
@@ -369,43 +384,43 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tests_createUser - 2018.12.06 at 14h 48m 36s.xml">
-      <configuration name="Tests.createUser" configurationId="TestNG" />
+    <history-entry file="Tests_j - 2018.12.11 at 18h 35m 23s.xml">
+      <configuration name="Tests.j" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Tests_deleteUser - 2018.12.06 at 15h 01m 03s.xml">
-      <configuration name="Tests.deleteUser" configurationId="TestNG" />
+    <history-entry file="Tests_j - 2018.12.11 at 18h 36m 34s.xml">
+      <configuration name="Tests.j" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Tests_deleteUser - 2018.12.06 at 15h 01m 42s.xml">
-      <configuration name="Tests.deleteUser" configurationId="TestNG" />
+    <history-entry file="Tests_j - 2018.12.11 at 18h 38m 09s.xml">
+      <configuration name="Tests.j" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Tests_deleteUser - 2018.12.06 at 15h 06m 59s.xml">
-      <configuration name="Tests.deleteUser" configurationId="TestNG" />
+    <history-entry file="Tests_j - 2018.12.11 at 18h 40m 20s.xml">
+      <configuration name="Tests.j" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Tests_deleteUser - 2018.12.06 at 15h 16m 05s.xml">
-      <configuration name="Tests.deleteUser" configurationId="TestNG" />
+    <history-entry file="Tests_j - 2018.12.11 at 18h 40m 56s.xml">
+      <configuration name="Tests.j" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Tests_deleteUser - 2018.12.06 at 15h 22m 01s.xml">
-      <configuration name="Tests.deleteUser" configurationId="TestNG" />
+    <history-entry file="Tests_j - 2018.12.11 at 18h 41m 25s.xml">
+      <configuration name="Tests.j" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Tests_deleteUser - 2018.12.06 at 15h 23m 17s.xml">
-      <configuration name="Tests.deleteUser" configurationId="TestNG" />
+    <history-entry file="Tests_j - 2018.12.11 at 18h 41m 45s.xml">
+      <configuration name="Tests.j" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Tests_deleteUser - 2018.12.06 at 15h 24m 22s.xml">
-      <configuration name="Tests.deleteUser" configurationId="TestNG" />
+    <history-entry file="Tests_j - 2018.12.11 at 18h 42m 19s.xml">
+      <configuration name="Tests.j" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Tests_deleteUser - 2018.12.06 at 15h 27m 29s.xml">
-      <configuration name="Tests.deleteUser" configurationId="TestNG" />
+    <history-entry file="Tests_j - 2018.12.11 at 18h 42m 41s.xml">
+      <configuration name="Tests.j" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Tests_deleteUser - 2018.12.06 at 15h 28m 14s.xml">
-      <configuration name="Tests.deleteUser" configurationId="TestNG" />
+    <history-entry file="Tests_j - 2018.12.11 at 18h 44m 00s.xml">
+      <configuration name="Tests.j" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18910742" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972826" visible="true" weight="0.19515885" />
+      <window_info id="Structure" order="1" sideWeight="0.5027174" side_tool="true" weight="0.19515885" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -413,15 +428,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34369886" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28805238" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3289689" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.23076923" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32980332" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -534,11 +549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#213#214#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -602,9 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -626,10 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="15" column="70" lean-forward="true" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
-          <folding>
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#534#535#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -644,11 +647,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#861#862#0" expanded="true" />
-          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../API_requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AppTest.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.9/httpcore-4.4.9.jar!/org/apache/http/HttpResponse.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -657,24 +663,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/JiraAuto/api/Tests.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.9/httpcore-4.4.9.jar!/org/apache/http/StatusLine.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="130" column="21" selection-start-line="130" selection-start-column="21" selection-end-line="130" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#674#675#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="119">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/JiraAuto/api/requests/Requests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-70">
-          <caret line="50" column="25" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="25" />
+        <state relative-caret-position="22">
+          <caret line="69" column="82" selection-start-line="69" selection-start-column="82" selection-end-line="69" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/JiraAuto/api/Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-77">
+          <caret line="173" column="23" selection-start-line="173" selection-start-column="23" selection-end-line="173" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
           </folding>
         </state>
       </provider>

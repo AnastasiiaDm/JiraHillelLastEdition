@@ -15,8 +15,10 @@ import org.testng.annotations.Test;
 import JiraAuto.api.requests.Requests;
 
 public class Tests {
+    String URL = "http://37.59.228.229";
     String baseURL = "http://37.59.228.229:3000/API/users/";
     String userId = "";
+    String port20007 = ":20007";
 
     private void findUserID(String data) {
         Matcher m = Pattern.compile("\"id\":\"(\\d+)").matcher(data);
@@ -59,6 +61,7 @@ public class Tests {
 
         Assert.assertTrue(updatedInfo.contains(data));
     }
+
     @Test(description = "Fourth requirement - creating users")
     void createUser() throws IOException, ParseException {
 //
@@ -74,7 +77,7 @@ public class Tests {
         System.out.println("responseData1 = " + responseData[1]);
 
         JSONParser jsonParser = new JSONParser();
-        JSONObject jsonObject = (JSONObject)jsonParser.parse(responseData[1]);
+        JSONObject jsonObject = (JSONObject) jsonParser.parse(responseData[1]);
         Long newID = (Long) jsonObject.get("id");
         System.out.println("new ID = " + newID);
 
@@ -83,6 +86,7 @@ public class Tests {
 
         Assert.assertTrue(updatedInfo.contains(newID.toString()));
     }
+
     @Test(description = "Fifth requirement - edit users admin role")
     void adminUser() throws IOException {
         String data = "{\"role\":\"Administrator\",\"phone\":\"blabla\",\"name\":\"Nasik_Java\",\"id\":94}";
@@ -116,7 +120,7 @@ public class Tests {
         System.out.println("responseData1 = " + responseData[1]);
 
         JSONParser jsonParser = new JSONParser();
-        JSONObject jsonObject = (JSONObject)jsonParser.parse(responseData[1]);
+        JSONObject jsonObject = (JSONObject) jsonParser.parse(responseData[1]);
         Long newID = (Long) jsonObject.get("id");
         System.out.println("new ID = " + newID);
 
@@ -126,11 +130,12 @@ public class Tests {
         Assert.assertTrue(updatedInfo.contains(newID.toString()));
         Assert.assertTrue(updatedInfo.contains(responseData[1]));
     }
+
     @Test(description = "Seventh requirement - creating admin")
-    void deleteUser() throws IOException{
+    void deleteUser() throws IOException {
         userId = "110";
 
-        String[] responseData = Requests.sendDelete(baseURL + userId );
+        String[] responseData = Requests.sendDelete(baseURL + userId);
 
         System.out.println("responseData1: " + responseData[1]);
 
@@ -141,5 +146,56 @@ public class Tests {
 
     }
 
+    @Test(description = "Eighth  requirement - open port 20007")
+    void openPort20007() throws IOException {
+        String[] responseData = Requests.sendGet(URL + port20007);
+//        String[] responseData = Requests.sendGet(URL + ":3000");
+        if (responseData != null)
+            System.out.println("responseData success: " + responseData[1]);
+        else
+            System.out.println("Object is null");
+    }
+
+    @Test(description = "Ninth  requirement - all requests contain header Content-Type application/json")
+    void responseContainHeader() throws IOException {
+        String[] responseData = Requests.sendGet(URL + ":3000");
+        if (responseData != null)
+            System.out.println("responseData success: " + responseData[0]);
+        else
+            System.out.println("Object is null");
+
+        if (responseData[0].contains("[Content-Type: application/json; "))
+            System.out.println("Content-Type correct");
+        else
+            System.out.println("Incorrect Content-Type: " + responseData[0]);
+    }
+
+    @Test(description = "Tenth  requirement - if header incorrect or not exist, return 401")
+    void errorStatus401() throws IOException {
+        String[] responseData = Requests.sendGet(URL + ":3000");
+//        String[] responseData = Requests.sendPost(baseURL, "");
+
+        if (responseData != null)
+            System.out.println("responseData success: " + responseData[0]);
+        else
+            System.out.println("Object is null");
+
+        if (responseData[0].contains("[Content-Type: application/json; "))
+            System.out.println("Content-Type correct");
+        if (!responseData[0].contains("[Content-Type: application/json; ") || !responseData[0].contains("[Content-Type: ")) {
+            System.out.println("Content-Type incorrect or not exist" + "\n" + responseData[0]);
+            System.out.println("response status: " + "\n" + responseData[2]);
+            if (!responseData[2].contains("401")){
+                Assert.assertFalse(responseData[2].contains("401"));
+                System.out.println("incorrect status: " + responseData[2]);
+            }
+            else{
+                Assert.assertTrue(responseData[2].contains("401"));
+                System.out.println("status 401 is present");
+            }
+
+        }
+
+    }
 
 }
