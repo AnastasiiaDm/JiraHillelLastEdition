@@ -185,16 +185,69 @@ public class Tests {
         if (!responseData[0].contains("[Content-Type: application/json; ") || !responseData[0].contains("[Content-Type: ")) {
             System.out.println("Content-Type incorrect or not exist" + "\n" + responseData[0]);
             System.out.println("response status: " + "\n" + responseData[2]);
-            if (!responseData[2].contains("401")){
+            if (!responseData[2].contains("401")) {
                 Assert.assertFalse(responseData[2].contains("401"));
                 System.out.println("incorrect status: " + responseData[2]);
-            }
-            else{
+            } else {
                 Assert.assertTrue(responseData[2].contains("401"));
                 System.out.println("status 401 is present");
             }
-
         }
+    }
+
+    @Test(description = "Eleventh  requirement - initial server state")
+    void initialServerState() throws IOException {
+
+    }
+
+    @Test(description = "Twelfth  requirement - if  role incorrect, return 401")
+    void incorrectRole() throws IOException, ParseException {
+        JSONArray array = new JSONArray();
+        JSONObject item = new JSONObject();
+        item.put("name", "Nasik_Student_noRole");
+        item.put("phone", "blabla");
+        item.put("role", "Administrator");
+        array.add("items massive = " + item);
+        System.out.println("item: " + item);
+        String[] responseData = Requests.sendPost(baseURL, item.toString());
+
+        System.out.println("responseData0 = " + responseData[0]);
+        System.out.println("responseData1 = " + responseData[1]);
+
+        JSONParser jsonParser = new JSONParser();
+        JSONObject jsonObject = (JSONObject) jsonParser.parse(responseData[1]);
+        Long newID = (Long) jsonObject.get("id");
+        System.out.println("new ID = " + newID);
+
+        String updatedInfo = Requests.sendGet(baseURL)[1];
+
+        if (updatedInfo.contains(newID.toString())) {
+            Assert.assertTrue(updatedInfo.contains(newID.toString()));
+            System.out.println("updatedInfo: " + updatedInfo);
+        } else {
+            Assert.assertFalse(!updatedInfo.contains(newID.toString()));
+            System.out.println("updatedInfo: " + updatedInfo);
+        }
+
+        if (responseData[1].contains("\"role\":\"Administrator\"")){
+            Assert.assertTrue(true);
+            System.out.println("responseData[1].contains(role: Administrator)");
+        }else {
+            Assert.assertFalse(false);
+            System.out.println("responseData[1].contains incorret role: " + responseData[1]);
+            if (responseData[2].contains("401")){
+                Assert.assertTrue(true);
+                System.out.println("request 401 is present");
+            }
+            else {
+                Assert.assertFalse(false);
+                System.out.println("incorrect request, expected: 401, actual: " + responseData[2]);
+            }
+        }
+    }
+
+    @Test(description = "Thirteenhh  requirement - if user is not exist, for modification or deleting return 404")
+    void nonexistentUser() throws IOException {
 
     }
 

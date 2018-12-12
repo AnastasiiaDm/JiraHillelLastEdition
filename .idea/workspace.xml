@@ -4,9 +4,6 @@
     <list default="true" id="e1908af8-cacc-4233-b3d9-ec00b2090802" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/JiraAuto/api/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JiraAuto/api/Tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/JiraAuto/api/requests/Requests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JiraAuto/api/requests/Requests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/JiraAuto/api/Tests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/JiraAuto/api/Tests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/JiraAuto/api/requests/Requests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/JiraAuto/api/requests/Requests.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,22 +30,24 @@
           <entry key="project.open.time.73" value="1" />
           <entry key="project.open.time.75" value="1" />
           <entry key="project.open.time.76" value="1" />
+          <entry key="project.open.time.79" value="1" />
           <entry key="project.open.time.81" value="2" />
           <entry key="project.open.time.83" value="1" />
+          <entry key="project.open.time.86" value="1" />
           <entry key="project.open.time.90" value="1" />
           <entry key="project.open.time.96" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2759" />
+          <entry key="java" value="3178" />
           <entry key="xml" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2759" />
+          <entry key="JAVA" value="3178" />
           <entry key="XML" value="24" />
         </counts>
       </usages-collector>
@@ -75,12 +74,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/JiraAuto/api/Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-77">
-              <caret line="173" column="23" selection-start-line="173" selection-start-column="23" selection-end-line="173" selection-end-column="23" />
+            <state relative-caret-position="-735">
+              <caret line="194" selection-start-line="194" selection-end-line="194" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#752#753#0" expanded="true" />
-                <element signature="e#830#831#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,7 +86,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/JiraAuto/api/requests/Requests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
+            <state relative-caret-position="353">
               <caret line="69" column="82" selection-start-line="69" selection-start-column="82" selection-end-line="69" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -115,6 +112,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>adm</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -179,6 +181,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -243,11 +246,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544546670195" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544631483837" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../pom.xml" />
   </component>
   <component name="RunDashboard">
@@ -262,8 +264,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.Tests.j">
-    <configuration name="Tests.deleteUser" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.Tests.incorrectRole">
+    <configuration name="Tests.incorrectRole" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="JiraHillelLastEdition" />
       <extension name="coverage">
         <pattern>
@@ -273,7 +275,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="JiraAuto.api" />
       <option name="MAIN_CLASS_NAME" value="JiraAuto.api.Tests" />
-      <option name="METHOD_NAME" value="deleteUser" />
+      <option name="METHOD_NAME" value="incorrectRole" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -354,19 +356,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.Tests.deleteUser" />
       <item itemvalue="TestNG.Tests.openPort20007" />
       <item itemvalue="TestNG.Tests.n" />
       <item itemvalue="TestNG.Tests.responceConteinHeader" />
       <item itemvalue="TestNG.Tests.j" />
+      <item itemvalue="TestNG.Tests.incorrectRole" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Tests.incorrectRole" />
         <item itemvalue="TestNG.Tests.j" />
         <item itemvalue="TestNG.Tests.responceConteinHeader" />
         <item itemvalue="TestNG.Tests.n" />
         <item itemvalue="TestNG.Tests.openPort20007" />
-        <item itemvalue="TestNG.Tests.deleteUser" />
       </list>
     </recent_temporary>
   </component>
@@ -384,18 +386,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tests_j - 2018.12.11 at 18h 35m 23s.xml">
-      <configuration name="Tests.j" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Tests_j - 2018.12.11 at 18h 36m 34s.xml">
-      <configuration name="Tests.j" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Tests_j - 2018.12.11 at 18h 38m 09s.xml">
-      <configuration name="Tests.j" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Tests_j - 2018.12.11 at 18h 40m 20s.xml">
-      <configuration name="Tests.j" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="Tests_j - 2018.12.11 at 18h 40m 56s.xml">
       <configuration name="Tests.j" configurationId="TestNG" />
     </history-entry>
@@ -414,12 +404,24 @@
     <history-entry file="Tests_j - 2018.12.11 at 18h 44m 00s.xml">
       <configuration name="Tests.j" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="Tests_incorrectRole - 2018.12.12 at 18h 06m 32s.xml">
+      <configuration name="Tests.incorrectRole" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Tests_incorrectRole - 2018.12.12 at 18h 11m 07s.xml">
+      <configuration name="Tests.incorrectRole" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Tests_incorrectRole - 2018.12.12 at 18h 14m 30s.xml">
+      <configuration name="Tests.incorrectRole" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Tests_incorrectRole - 2018.12.12 at 18h 15m 47s.xml">
+      <configuration name="Tests.incorrectRole" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972826" visible="true" weight="0.19515885" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972826" visible="true" weight="0.20121029" />
       <window_info id="Structure" order="1" sideWeight="0.5027174" side_tool="true" weight="0.19515885" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -672,7 +674,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/JiraAuto/api/requests/Requests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
+        <state relative-caret-position="353">
           <caret line="69" column="82" selection-start-line="69" selection-start-column="82" selection-end-line="69" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -682,12 +684,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/JiraAuto/api/Tests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-77">
-          <caret line="173" column="23" selection-start-line="173" selection-start-column="23" selection-end-line="173" selection-end-column="23" />
+        <state relative-caret-position="-735">
+          <caret line="194" selection-start-line="194" selection-end-line="194" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#752#753#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
           </folding>
         </state>
       </provider>
